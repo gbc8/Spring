@@ -1,0 +1,21 @@
+server:
+ port: 8080
+ 
+spring:
+ datasource:
+  driver-class-name: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/cruddb
+  username: postgres
+  password: admin
+ jpa:
+  hibernate:
+   ddl-auto: create-drop
+  show_sql: true
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:mysecret}"
